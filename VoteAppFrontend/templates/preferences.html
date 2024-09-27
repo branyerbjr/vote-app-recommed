@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Enviar Preferencias</h2>
+<form method="POST" action="{{ url_for('preferences') }}">
+    <div class="mb-3">
+        <label for="user_id" class="form-label">ID de Usuario</label>
+        <input type="text" class="form-control" id="user_id" name="user_id" placeholder="Ingresa tu ID de Usuario" required>
+    </div>
+    <div class="mb-3">
+        <label for="item_a" class="form-label">Preferencia para Item A</label>
+        <input type="number" class="form-control" id="item_a" name="item_a" min="1" max="5" placeholder="Calificación (1-5)" required>
+    </div>
+    <div class="mb-3">
+        <label for="item_b" class="form-label">Preferencia para Item B</label>
+        <input type="number" class="form-control" id="item_b" name="item_b" min="1" max="5" placeholder="Calificación (1-5)" required>
+    </div>
+    <div class="mb-3">
+        <label for="item_c" class="form-label">Preferencia para Item C</label>
+        <input type="number" class="form-control" id="item_c" name="item_c" min="1" max="5" placeholder="Calificación (1-5)" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Preferencias</button>
+</form>
+{% endblock %}

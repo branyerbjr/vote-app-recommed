@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Recomendaciones para Usuario: {{ user_id }}</h2>
+
+{% if neighbors %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Posición</th>
+                <th scope="col">ID de Usuario</th>
+                <th scope="col">Distancia de Manhattan</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for neighbor in neighbors %}
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ neighbor.userId }}</td>
+                    <td>{{ neighbor.distance }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No hay recomendaciones disponibles.</p>
+{% endif %}
+
+<a href="{{ url_for('index') }}" class="btn btn-secondary">Volver al Inicio</a>
+{% endblock %}

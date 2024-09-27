@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gB/BTZ0TCxdR+V7g7XKNxl8JlhH3lnit5pNxCJgaUVM=",
+  "Source": "VoteAppBackend",
+  "BasePath": "_content/VoteAppBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

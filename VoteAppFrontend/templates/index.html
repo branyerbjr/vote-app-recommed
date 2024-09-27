@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">¡Bienvenido a Vote App!</h1>
+    <p class="lead">Esta es una aplicación sencilla para votar y obtener recomendaciones basadas en tus preferencias.</p>
+    <hr class="my-4">
+    <p>Selecciona una opción para comenzar:</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('vote') }}" role="button">Enviar Voto</a>
+    <a class="btn btn-secondary btn-lg" href="{{ url_for('preferences') }}" role="button">Preferencias</a>
+</div>
+{% endblock %}

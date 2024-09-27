@@ -1,0 +1,27 @@
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Lab07pass
+      POSTGRES_DB: votesdb
+    ports:
+      - "5432:5432"
+
+#  worker:
+#    build: ./Worker
+#    depends_on:
+#      - redis
+#      - db
+#    environment:
+#      - REDIS_HOST=redis
+#      - REDIS_PORT=6379
+#      - POSTGRES_HOST=db
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=Lab07pass
+#      - POSTGRES_DB=votesdb

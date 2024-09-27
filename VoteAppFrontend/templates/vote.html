@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Enviar Voto</h2>
+<form method="POST" action="{{ url_for('vote') }}">
+    <div class="mb-3">
+        <label for="choice" class="form-label">Elección</label>
+        <select class="form-select" id="choice" name="choice" required>
+            <option value="" selected>Selecciona una opción</option>
+            <option value="Cat">Gato</option>
+            <option value="Dog">Perro</option>
+            <!-- Puedes añadir más opciones si lo deseas -->
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="timestamp" class="form-label">Fecha y Hora</label>
+        <input type="datetime-local" class="form-control" id="timestamp" name="timestamp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Voto</button>
+</form>
+{% endblock %}
